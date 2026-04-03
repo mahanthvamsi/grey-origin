@@ -13,7 +13,7 @@ import { gsap } from "gsap";
  * 🔧 Swap HERO_VIDEO_URL for real footage when ready.
  */
 
-const HERO_VIDEO_URL = "src/assets/My Movie 1.mp4";
+const HERO_VIDEO_URL = "/assets/hero.mp4";
 
 export default function Hero() {
   const maskLayer = useRef(null);
