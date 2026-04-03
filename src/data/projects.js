@@ -1,0 +1,43 @@
+export const projects = [
+  {
+    id: 1,
+    title: "Dubai Aerial Showreel",
+    category: "Commercial",
+    year: "2024",
+    featured: true,
+    vimeoUrl: "https://vimeo.com/123456789",
+    thumbnail: "src/assets/image.png",
+    gif: "src/assets/ezgif-8d5f8b9afedcdfb4.gif",
+  },
+  {
+    id: 2,
+    title: "Patagonia - End of the World",
+    category: "Travel",
+    year: "2023",
+    featured: false,
+    vimeoUrl: "https://vimeo.com/123456789",
+    thumbnail: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+    gif: "https://media.giphy.com/media/26BRzozg4TCBXv6QU/giphy.gif",
+  },
+  {
+    id: 3,
+    title: "Nike - Move With Purpose",
+    category: "Brand",
+    year: "2024",
+    featured: false,
+    vimeoUrl: "https://vimeo.com/123456789",
+    thumbnail: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+    gif: "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif",
+  },
+  {
+    id: 4,
+    title: "Morocco Timelapse",
+    category: "Personal",
+    year: "2023",
+    featured: false,
+    vimeoUrl: "https://vimeo.com/123456789",
+    thumbnail: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800&q=80",
+    gif: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif",
+  },
+  
+];
