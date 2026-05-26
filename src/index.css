@@ -69,3 +69,7 @@ h1, h2, h3, .bebas {
 a, button, input, textarea, [role="button"] {
   cursor: none;
 }
+@font-face {
+    font-family: open-screen;
+    src: url('./assets/HalenoirExpanded-ExtraBold.otf') format("opentype");
+}

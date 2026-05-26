@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Cursor from "./components/Cursor";
@@ -10,7 +9,10 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WorkPage from "./components/WorkPage";
+import VideoPage from "./components/VideoPage";
+import Admin from "./components/Admin";
 import NotFound from "./components/NotFound";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,14 +46,19 @@ function HomePage() {
 }
 
 export default function App() {
+const location = useLocation();
+  const isAdmin = location.pathname === "/admin";
+
   return (
     <>
       <Cursor />
-      <Navbar />
+      {!isAdmin && <Navbar />}
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/"              element={<HomePage />} />
+        <Route path="/work"          element={<WorkPage />} />
+        <Route path="/work/:slug"    element={<VideoPage />} />
+        <Route path="/admin"         element={<Admin />} />
+        <Route path="*"              element={<NotFound />} />
       </Routes>
     </>
   );
