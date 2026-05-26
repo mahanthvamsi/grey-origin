@@ -81,11 +81,16 @@ export default function WorkPage() {
   };
 
   const handleBack = () => {
-    gsap.to(container.current, {
-      opacity: 0, duration: 0.4, ease: "power2.in",
-      onComplete: () => navigate("/"),
-    });
-  };
+  gsap.to(container.current, {
+    opacity: 0, duration: 0.4, ease: "power2.in",
+    onComplete: () => {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    },
+  });
+};
 
   if (loading) return (
     <div style={{ position: "fixed", inset: 0, background: "#080808", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "20px" }}>

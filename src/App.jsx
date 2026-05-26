@@ -28,7 +28,7 @@ function HomePage() {
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 }
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
